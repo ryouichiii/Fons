@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply bg-radial from-zinc-800 to-zinc-950 text-cyan-50 text-center font-mono overflow-x-hidden;
+    }
+    h1 {
+        @apply m-2 mb-4 text-4xl font-bold;
+        text-shadow: 0px 0px 15px oklch(from var(--color-cyan-100) l c h / 60%);
+    }
+    p {
+        @apply m-2
+    }
+    small {
+        @apply text-xs italic text-zinc-200 opacity-50;
+    }
+    small a {
+        @apply font-bold underline text-cyan-200;
+    }
+    ul li {
+        @apply py-2 px-1;
+    }
+    hr {
+        @apply my-3 border-t border-cyan-200 border-dashed opacity-50 mask-alpha
+        mask-r-from-black mask-r-from-50% mask-r-to-transparent
+        mask-l-from-black mask-l-from-50% mask-l-to-transparent;
+        box-shadow: 
+            0px 0px 10px oklch(from var(--color-cyan-100) l c h / 50%);
+    }
+}
+
+@layer components {
+    /* Card Container */
+    .card {
+        @apply m-9 bg-zinc-800 border border-cyan-50 rounded-xl;
+        box-shadow: 
+            0px 0px 40px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 30px oklch(from var(--color-cyan-100) l c h / 40%);
+    }
+
+    /* Main Button */
+    .btn {
+        @apply p-4 border border-cyan-50 rounded-lg w-full transition duration-200 ease-in-out bg-cyan-100/10;
+        box-shadow: 
+            0px 0px 10px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 15px oklch(from var(--color-cyan-100) l c h / 30%);
+    }
+    .btn:hover {
+        @apply transition -translate-y-1 duration-200 ease-in-out text-white bg-cyan-100/40;
+        box-shadow:
+            0px 0px 15px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 10px oklch(from var(--color-cyan-100) l c h / 30%),
+            0px 4px 0px var(--color-cyan-50);
+    }
+    .btn:active {
+        @apply transition translate-0 duration-100 ease-out text-zinc-500 border-zinc-400 bg-cyan-100/0;
+        box-shadow:
+            0px 0px 5px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 5px oklch(from var(--color-cyan-100) l c h / 30%),
+            0px 0px 0px var(--color-zinc-950);
+    }
+
+    /* Card Reveal Button */
+    .reveal-btn {
+        @apply h-24 w-24 bg-zinc-800 border border-cyan-50 rounded-lg transition duration-200 ease-in-out;
+        box-shadow: 
+            0px 0px 10px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 15px oklch(from var(--color-cyan-100) l c h / 30%);
+    }
+    .reveal-btn:hover {
+        @apply transition scale-105 duration-200 ease-in-out text-white;
+        box-shadow:
+            0px 0px 15px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 10px oklch(from var(--color-cyan-100) l c h / 30%);
+    }
+    .reveal-btn:active {
+        @apply transition scale-95 duration-100 ease-out text-zinc-500 border-zinc-400;
+        box-shadow:
+            0px 0px 5px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 5px oklch(from var(--color-cyan-100) l c h / 30%);
+    }
+
+    /* Disclaimer Text */
+    .disclaimer {
+        @apply text-xs tracking-wider transition duration-200;
+    }
+}
+
+@layer utilities {
+    .glow {
+        box-shadow: 
+            0px 0px 10px oklch(from var(--color-cyan-100) l c h / 50%),
+            inset 0px 0px 15px oklch(from var(--color-cyan-100) l c h / 30%);
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "fons",
+  "version": "",
+  "description": "'papafo.nz' website",
+  "homepage": "https://github.com/ryouichiii/Fons#readme",
+  "bugs": {
+    "url": "https://github.com/ryouichiii/Fons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryouichiii/Fons.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "npx @tailwindcss/cli -i ./docs/css/input.css -o ./docs/css/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
+}

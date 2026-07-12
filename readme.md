@@ -1,1 +1,1 @@
-Just some simple redirect
+'papafo.nz' website
