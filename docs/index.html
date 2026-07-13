@@ -6,16 +6,20 @@
 
         <!-- Meta Tags -->
         <meta charset="UTF-8">
-        <meta name="og:image" content="">
+        <meta name="og:image" content="./images/icon.webp">
         <meta name="og:title" content="FØNS.ᐟ">
         <meta name="og:description" content="FØNS' link card.">
+        <meta name="og:type" content="websiteᐟ">
+        <meta name="og:locale" content="en-GB">
         <meta name="description" content="FØNS' link card.">
         <meta name="keywords" content="nsfw, bara, muscle, art">
         <meta name="author" content="FØNS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Tailwind CSS -->
+        <!-- Tailwind CSS + Preloads -->
         <link href="./css/output.css" rel="stylesheet">
+        <link rel="preload" href="./images/icon.webp" as="image">
+        <link rel="preload" href="./images/iconhover.webp" as="image">
 
         <!-- JS and FontAwesome Kit -->
         <script src="./js/script.js" defer></script>
@@ -24,74 +28,82 @@
     </head>
     <body>
         <!-- Body Container -->
-        <div class="grid content-center place-items-center h-screen">
-            <!-- Card Container -->
-            <div class="relative flex justify-center w-screen">
-                <!-- Reveal Card Button -->
-                <div class="absolute -top-3 z-10"><button class="reveal-btn" onclick="changeRevealStatus()"><small>placeholder</small></button></div>
-                <!-- Link Card (No padding) -->
-                <div class="card overflow-hidden
-                            min-w-xs w-1/2 max-w-lg max-h-0 opacity-0 z-0
-                            transition-[max-height,opacity] duration-400 ease-out pointer-events-none" id="linkCard">
-                    <!-- Button Spacer -->
-                    <div class="bg-teal-200/65 border-b border-cyan-50 h-10 overflow-hidden glow">
-                        <div class="w-full h-full bg-[url(../images/plaid.webp)] bg-repeat bg-size-[10rem]"></div>
+        <div class="grid content-center place-items-center h-screen overflow-y-scroll">
+            <!-- Scale -->
+            <div id="scale" class="transform ease-out duration-400">
+                <!-- Card Container -->
+                <div class="relative flex justify-center w-screen">
+                    <!-- Reveal Card Button -->
+                    <div class="absolute -top-8 z-10">
+                        <button class="reveal-btn cursor-pointer"
+                                title="&quot;What'cha starin' at? See sumthin' 'ya like?&quot;"
+                                onclick="changeRevealStatus()">
+                        </button>
                     </div>
-                    <!-- X Margin -->
-                    <div class="mx-6">
-                        <!-- Header + Subtitle -->
-                        <div class="flex flex-col mt-6">
-                            <h1 class="font-sans m-0">FØNS.ᐟ</h1>
-                            <small class="m-0 text-nowrap">NSFW Artist | your local dad fucker™</small>
+                    <!-- Link Card (No padding) -->
+                    <div class="card overflow-hidden
+                                min-w-xs w-1/2 max-w-lg max-h-0 opacity-0 z-0
+                                transition-[max-height,opacity] duration-400 ease-out pointer-events-none" id="linkCard">
+                        <!-- Button Spacer -->
+                        <div class="bg-teal-200/65 mb-9 border-b border-cyan-50 h-10 overflow-hidden glow">
+                            <div class="w-full h-full bg-[url(../images/plaid.webp)] bg-repeat bg-size-[10rem]"></div>
                         </div>
-                        <ul class="my-5">
-                            <li>
-                                <!-- Telegram Channel Button -->
-                                <a href="https://t.me/papa_fons">
-                                    <button class="btn">
-                                        <i class="fa-brands fa-telegram fa-lg"></i> 
-                                        <span>Telegram Channel</span>
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <hr>
-                            </li>
-                            <li>
-                                <!-- BlueSky Button -->
-                                <a href="https://bsky.app/profile/papafo.nz">
-                                    <button class="btn">
-                                        <i class="fa-brands fa-bluesky fa-lg"></i>
-                                        <span>BlueSky</span>
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <!-- Twitter Button -->
-                                <a href="https://x.com/papafons_">
-                                    <button class="btn">
-                                        <i class="fa-brands fa-twitter fa-lg"></i>
-                                        <span>Twitter</span>
-                                    </button>
-                                </a>
-                            </li>
-                            <li>
-                                <!-- NewGrounds Button -->
-                                <a href="https://papafons.newgrounds.com/">
-                                    <button class="btn">
-                                        <i class="fa-solid fa-n fa-lg fa-width-auto" style="transform: translate(.6em) scaleX(.75);"></i>
-                                        <i class="fa-solid fa-g fa-lg fa-width-auto" style="transform: scaleX(.75);"></i>
-                                        <span>NewGrounds</span>&nbsp;
-                                    </button>
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- X Margin -->
+                        <div class="mx-6">
+                            <!-- Header + Subtitle -->
+                            <div class="flex flex-col mt-6">
+                                <h1 class="font-sans m-0">FØNS.ᐟ</h1>
+                                <small class="m-0 text-nowrap">NSFW Artist | your local dad fucker™</small>
+                            </div>
+                            <ul class="my-5">
+                                <li>
+                                    <!-- Telegram Channel Button -->
+                                    <a href="https://t.me/papa_fons">
+                                        <button class="btn">
+                                            <i class="fa-brands fa-telegram fa-lg"></i> 
+                                            <span>Telegram Channel</span>
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <!-- BlueSky Button -->
+                                    <a href="https://bsky.app/profile/papafo.nz">
+                                        <button class="btn">
+                                            <i class="fa-brands fa-bluesky fa-lg"></i>
+                                            <span>BlueSky</span>
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- Twitter Button -->
+                                    <a href="https://x.com/papafons_">
+                                        <button class="btn">
+                                            <i class="fa-brands fa-twitter fa-lg"></i>
+                                            <span>Twitter</span>
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- NewGrounds Button -->
+                                    <a href="https://papafons.newgrounds.com/">
+                                        <button class="btn">
+                                            <i class="fa-solid fa-n fa-lg fa-width-auto" style="transform: translate(.6em) scaleX(.75);"></i>
+                                            <i class="fa-solid fa-g fa-lg fa-width-auto" style="transform: scaleX(.75);"></i>
+                                            <span>NewGrounds</span>&nbsp;
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- NSFW Disclaimer -->
-            <div class="disclaimer opacity-0 transition-all duration-400 ease-out" id="disclaimer">
-                <small class="text-nowrap">All links are for 18+ audiences only.</small>
+                <!-- NSFW Disclaimer -->
+                <div class="disclaimer opacity-0 transition-all duration-400 ease-out" id="disclaimer">
+                    <small class="text-nowrap">All links are for 18+ audiences only.</small>
+                </div>
             </div>
             <!-- Credit -->
             <div class="m-1 absolute bottom-1 right-1">

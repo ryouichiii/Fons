@@ -62,22 +62,13 @@
 
     /* Card Reveal Button */
     .reveal-btn {
-        @apply h-24 w-24 bg-zinc-800 border border-cyan-50 rounded-lg transition duration-200 ease-in-out;
-        box-shadow: 
-            0px 0px 10px oklch(from var(--color-cyan-100) l c h / 50%),
-            inset 0px 0px 15px oklch(from var(--color-cyan-100) l c h / 30%);
+        @apply h-36 w-36 transition duration-200 ease-in-out bg-[url(../images/icon.webp)] bg-center bg-contain;
     }
     .reveal-btn:hover {
-        @apply transition scale-105 duration-200 ease-in-out text-white;
-        box-shadow:
-            0px 0px 15px oklch(from var(--color-cyan-100) l c h / 50%),
-            inset 0px 0px 10px oklch(from var(--color-cyan-100) l c h / 30%);
+        @apply transition scale-105 duration-200 ease-in-out bg-[url(../images/iconhover.webp)] bg-center bg-contain brightness-110;
     }
     .reveal-btn:active {
-        @apply transition scale-95 duration-100 ease-out text-zinc-500 border-zinc-400;
-        box-shadow:
-            0px 0px 5px oklch(from var(--color-cyan-100) l c h / 50%),
-            inset 0px 0px 5px oklch(from var(--color-cyan-100) l c h / 30%);
+        @apply transition scale-95 duration-100 ease-out;
     }
 
     /* Disclaimer Text */

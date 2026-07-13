@@ -17,7 +17,7 @@ function changeRevealStatus() {
     linkCard.classList.toggle("opacity-0", !revealStatus);
     linkCard.classList.toggle("opacity-100", revealStatus);
     linkCard.classList.toggle("max-h-0", !revealStatus);
-    linkCard.classList.toggle("max-h-[31rem]", revealStatus);
+    linkCard.classList.toggle("max-h-[32rem]", revealStatus);
     linkCard.classList.toggle("pointer-events-none", !revealStatus);
     linkCard.classList.toggle("pointer-events-auto", revealStatus);
 

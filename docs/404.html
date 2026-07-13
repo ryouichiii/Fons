@@ -18,32 +18,39 @@
     </head>
     <body>
         <!-- Body Container -->
-        <div class="h-screen flex flex-col items-stretch-center justify-center w-full">
-            <!-- Position -->
-            <div class="flex justify-center">
-                <!-- Link Card -->
-                <div class="card min-w-xs w-1/2 max-w-2xl overflow-hidden">
-                    <!-- X Margin -->
-                    <div class="mx-6">
-                        <!-- Header + Subtitle -->
-                        <div class="flex flex-col my-6">
-                            <h1 class="font-sans">
-                                <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
-                                404 Not Found
-                            </h1>
-                            <hr>
-                            <p>
-                                "How'd 'ya even get here, min elskede?"<br><br>
-                                "Doooon't 'ye worry... 'Ol Fønsie can redirect 'ya. <i class="fa-regular fa-heart fa-sm"></i>"
-                            </p>
+        <div class="grid content-center place-items-center h-screen">
+            <!-- Scale -->
+            <div id="scale" class="transform ease-out duration-400">
+                <!-- Card Container -->
+                <div class="relative flex justify-center w-screen">
+                    <!-- Link Card (No Padding) -->
+                    <div class="card min-w-sm w-1/2 max-w-2xl overflow-hidden">
+                        <!-- X Margin -->
+                        <div class="mx-6">
+                            <!-- Header + Subtitle -->
+                            <div class="flex flex-col my-6">
+                                <h1 class="font-sans">
+                                    <i class="fa-solid fa-triangle-exclamation fa-sm"></i>
+                                    404 Not Found
+                                </h1>
+                                <hr>
+                                <p>
+                                    "How'd 'ya even get here, min elskede?"<br><br>
+                                    "Doooon't 'ye worry... 'Ol Fønsie can redirect 'ya. <i class="fa-regular fa-heart fa-sm"></i>"
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Manual Redirect -->
+                <small>
+                    Click <a href="index.html">here</a> if your browser doesn't redirect in <span id="countdown">10 seconds.</span>
+                </small>
             </div>
-            <!-- Manual Redirect -->
-            <small>
-                Click <a href="index.html">here</a> if your browser doesn't redirect in <span id="countdown">10 seconds.</span>
-            </small>
+            <!-- Credit -->
+            <div class="m-1 absolute bottom-1 right-1">
+                <small class="text-zinc-400"><span id="year"></span> © papafons</small>
+            </div>
         </div>
     </body>
 </html>
